@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Section Page</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="section1" class="section" style="background-image: url('./images/section1bgedited.jpg');">
+        <h1>LEVEL UP YOUR STYLE WITH<br>OUR SUMMER COLLECTIONS.</h1>
+    </div>
+    <div id="section2" class="section2" style="background-color: #3B3B3B;">
+        <div class="container">
+            <div class="column image-column">
+                <img src="./images/section2.jpg" alt="Image">
+            </div>
+            <div class="column explanation-column">
+                <div class="row">
+                    <h2>About Us</h2>
+                </div>
+                <div class="row">
+                    <p>We are a stylish glasses company dedicated to providing high-quality eyewear that combines
+                        fashion and function. Our mission is to enhance your vision with frames that express your unique
+                        style.</p>
+                </div>
+                <div class="row">
+                    <a href="#collection" class="btn">
+                        Collection
+                        <span class="arrow">&#10230;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section for Featured Products -->
+    <section id="featured-products-section">
+        <div class="carousel-container">
+            <div class="title">
+                <h2>Featured Products</h2>
+            </div>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <!-- Product Cards -->
+                    <div class="product-card">
+                        <img src="./images/carousel1.jpg" alt="Product 1">
+                        <h3>Product 1</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./images/carousel2.jpg" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./images/carousel3.jpg" alt="Product 3">
+                        <h3>Product 3</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="./images/carousel4.jpg" alt="Product 4">
+                        <h3>Product 4</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x240" alt="Product 5">
+                        <h3>Product 5</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x240" alt="Product 6">
+                        <h3>Product 6</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/400x240" alt="Product 7">
+                        <h3>Product 7</h3>
+                        <a href="#" class="btn">Take a Look!</a>
+                    </div>
+                    <div class="product-card">
+                        <!-- <img src="https://via.placeholder.com/400x240" alt="Product 8"> -->
+                        <h3>View all</h3>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <!-- End Product Cards -->
+                </div>
+                <div class="controls">
+                    <button class="btn-prev" onclick="prevSlide()">&#8249;</button>
+                    <button class="btn-next" onclick="nextSlide()">&#8250;</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            const totalSlides = document.querySelectorAll('#featured-products-section .product-card').length;
+            const slidesPerPage = 4; // Number of product cards per slide
+            const slideWidth = document.querySelector('#featured-products-section .product-card').clientWidth * slidesPerPage;
+
+            function showSlides() {
+                const slides = document.querySelector('#featured-products-section .carousel-inner');
+                slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+            }
+
+            function nextSlide() {
+                if (slideIndex < Math.ceil(totalSlides / slidesPerPage) - 1) {
+                    slideIndex++;
+                } else {
+                    slideIndex = 0; // Loop back to the first slide
+                }
+                showSlides();
+            }
+
+            function prevSlide() {
+                if (slideIndex > 0) {
+                    slideIndex--;
+                } else {
+                    slideIndex = Math.ceil(totalSlides / slidesPerPage) - 1; // Loop back to the last slide
+                }
+                showSlides();
+            }
+
+            // Initial showSlides call to display the first set of products
+            showSlides();
+        </script>
+
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+/* Define the font-face for The Seasons font */
+@font-face {
+  font-family: "The Seasons Bold";
+  src: url("../fonts/Fontspring-DEMO-theseasons-bd.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Dark overlay for better text readability */
+  z-index: 1;
+}
+
+.section h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3em;
+}
+.section2 {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
+
+.section2 h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3em;
+}
+
+/* Specific styles for Section 1 */
+#section1 h1 {
+  font-family: "The Seasons Bold", cursive;
+}
+
+/* Specific styles for Section 2 */
+#section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+#section2 .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensure content is above the overlay */
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#section2 .column {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+#section2 .image-column {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#section2 .image-column img {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+}
+
+#section2 .explanation-column {
+  flex: 0 0 50%;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  padding: 70px;
+}
+
+#section2 .explanation-column .row {
+  margin-bottom: 20px;
+}
+
+#section2 .explanation-column h2 {
+  font-size: 5.5em;
+  font-weight: 100;
+
+  font-style: normal;
+  margin: 0px;
+}
+
+#section2 .explanation-column p {
+  font-size: 2em;
+}
+
+#section2 .btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  cursor: pointer;
+  border-radius: 50px; /* Make button rounded */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#section2 .btn:hover {
+  background-color: white;
+  color: #3b3b3b;
+}
+
+#section2 .btn .arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s;
+}
+
+#section2 .btn:hover .arrow {
+  margin-left: 35px;
+}
+
+/* Full-width section */
+#featured-products-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.carousel-container {
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Maximum width for the carousel */
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Title */
+.title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.title h2 {
+  font-size: 32px;
+  font-weight: 100;
+  color: #333;
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Carousel inner */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.product-card {
+  flex: 0 0 calc(100% / 4);
+  max-width: calc(100% / 4);
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 400px; /* Adjusted height */
+}
+
+.product-card img {
+  width: 100%;
+  height: 60%; /* Adjusted height */
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 20px; /* Increased font size */
+  margin: 0px;
+  color: #3b3b3b;
+  text-align: left;
+}
+.product-card .btn {
+  display: inline-block;
+  /* padding: 8px 16px; */
+  background-color: transparent; /* Transparent background by default */
+  color: #3b3b3b; /* Black font color by default */
+  text-decoration: none;
+  /* border: 1px solid #000; */
+  /* border-radius: 4px; */
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  transition: color 0.3s, font-size 0.3s; /* Smooth transition for color and font-size */
+  font-size: 16px; /* Initial font size */
+}
+
+.product-card .btn::after {
+  content: " \2192"; /* Unicode arrow character (right arrow) */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.product-card .btn:hover {
+  color: #3b3b3b; /* Maintain black font color on hover */
+  font-size: 18px; /* Increase font size on hover */
+}
+
+.product-card .btn:hover::after {
+  opacity: 1; /* Show arrow on hover */
+}
+
+/* Carousel controls */
+.carousel .controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Previous button */
+.carousel .controls .btn-prev,
+  /* Next button */
+  .carousel .controls .btn-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+}
+
+/* Previous button position */
+.carousel .controls .btn-prev {
+  left: 10px;
+}
+
+/* Next button position */
+.carousel .controls .btn-next {
+  right: 10px;
+}
